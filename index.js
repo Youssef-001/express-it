@@ -37,6 +37,7 @@ const server = createServer((req, res) => {
     res.end(pageContent);
   }
 });
+console.log(hello);
 
 console.log("hello world");
 server.listen(port, hostname, () => {
