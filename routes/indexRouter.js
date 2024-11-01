@@ -9,11 +9,12 @@ const contactPath =
   "P:\\Node_projects\\express-it\\public\\pages\\contact-me.html";
 const errorPath = "P:\\Node_projects\\express-it\\public\\pages\\404.html";
 indexRouter.get("/", (req, res) => {
-  res.sendFile(indexPath);
+  res.render(index, {});
 });
 
-indexRouter.get("/about", (req, res) => res.sendFile(aboutPath));
+// indexRouter.get("/about", (req, res) => res.sendFile(aboutPath));
+indexRouter.get("/about", (req, res) => res.render("about", {}));
 
-indexRouter.get("/contact-me", (req, res) => res.sendFile(contactPath));
+indexRouter.get("/contact-me", (req, res) => res.render("contact-me", {}));
 
 module.exports = indexRouter;
